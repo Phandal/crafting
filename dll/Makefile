@@ -10,7 +10,7 @@ debug: CFLAGS += -glldb
 debug: all
 
 bin/munit:
-	mkdir bin/munit
+	mkdir -p bin/munit
 
 bin/dll: bin/main.o bin/list.o bin/munit/munit.o
 	$(CC) $(CFLAGS) -o $@ $^
